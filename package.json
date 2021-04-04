@@ -1,0 +1,28 @@
+{
+  "name": "photo-site",
+  "version": "1.0.0",
+  "description": "Photo Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass scss/app.scss -o css",
+    "css:watch": "npm run css && node-sass scss/app.scss -wo css",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@glidejs/glide": "^3.4.1",
+    "live-server": "^1.2.1",
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  }
+}

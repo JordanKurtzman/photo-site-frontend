@@ -1,0 +1,119 @@
+.nav {
+    background-color: $color-grey-pink;
+    font-size: 2.7rem;
+    padding: 1rem;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    &__mobile{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: .5 2.5rem;
+        @include respond(tab-port){
+            display: flex;
+        }
+        @include resize(mid){
+            display: flex;
+        }
+        &--bar{
+            height: 2px;
+            margin: 2px;
+            width: 20px;
+            display: block;
+            background: $color-black;
+        }
+       
+    }
+        
+    &__menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        transition: ease .25s all;
+        @media(max-width: 768px){
+            display: none;
+            &.active{
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                right: 0;
+                flex-direction: column;
+                li{
+                    display: block;
+                    background-color: $color-grey-pink;
+                }
+                a{
+                    display: block;
+                }
+                #dropdownbtn{
+                    order: 5;
+                }
+            }
+        }
+    
+
+        &--item{
+            display: inline-block;
+            a:link, a:visited, a:active {
+                display: inline-block;
+                color: $color-black;
+                text-decoration: none;
+                padding: .5rem 2.5rem;
+                text-transform: uppercase;
+            }
+            a:hover{
+                color: $color-light-grey;
+            }
+
+        }
+    }
+    &__submenu{
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+        &.dropdown{
+            display: block;
+        }
+        &--item{
+            display: block;
+            background-color: $color-medium-grey;
+            &:hover{
+                background-color: $color-light-pink;
+            }
+            
+        }
+        a:link, a:visited, a:active{
+            color: $color-black;
+            text-decoration: none;
+            padding: .5rem 2.5rem;
+            text-transform: uppercase;
+            color: $color-light-pink;
+        }
+        a:hover{
+            color: $color-medium-grey;
+        }
+        @media(max-width: 768px){
+            width: 100%;
+            &--item{
+                display: block;
+                background: $color-medium-grey;
+                color: $color-light-pink;
+            }
+        }
+    }
+
+
+}
+
+#dropdown-a{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+

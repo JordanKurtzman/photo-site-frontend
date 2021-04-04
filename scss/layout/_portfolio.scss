@@ -1,0 +1,27 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    overflow: hidden;
+    justify-content: space-around;
+    width: 90%;
+    height: 95%;
+    margin: 1rem auto 1rem auto;
+    @include respond(phone){
+        grid-template-columns: auto;
+    }
+    @include resize(skinny){
+        grid-template-columns: auto;
+    }
+    &__piece{
+        padding: 1rem;
+        justify-self: center;
+        &--image{
+            max-width: 100%;
+            height: auto;
+            
+
+        }
+    }
+
+}
