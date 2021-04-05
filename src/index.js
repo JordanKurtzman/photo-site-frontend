@@ -1,5 +1,5 @@
 import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
-import { glideHero, Glide } from './slideshow'
+import Glide from "@glidejs/glide"
 
 const toggleNav = document.querySelector('#toggleNav')
 const primaryMenu = document.querySelector('#primarymenu')
@@ -14,8 +14,17 @@ dropdownBtn.addEventListener('click', () => {
     submenu.classList.toggle('dropdown')
 })
 
+var glide = new Glide('#hero', {
+    type: 'carousel',
+    animationDuration: 2000,
+    autoplay: 4000,
+    focusAt: 'center',
+    perView: 1
+});
+
+glide.mount()
+
 displayPetPhoto()
 displayMaternityPhoto()
 displayPortraitPhoto()
 
-glideHero.mount()
