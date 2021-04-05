@@ -1,0 +1,27 @@
+.footer{
+    background-color: $color-grey-pink;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    overflow-y: hidden;
+    justify-content: center;
+    
+    
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 0;
+        a:link, a:visited, a:hover, a:active{
+            color: $color-white;
+        }
+    }
+    &__link--icons{
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+    
+}

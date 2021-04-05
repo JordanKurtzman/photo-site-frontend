@@ -11,6 +11,12 @@
 @import 'layout/services';
 @import 'layout/about';
 @import 'layout/portfolio';
+@import 'layout/frontpage';
+@import 'layout/footer';
+
+@import "fontawesome.scss";
+@import "solid.scss";
+@import 'brands.scss';
 
 @import '../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss';
 

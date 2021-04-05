@@ -22,9 +22,11 @@ var glide = new Glide('#hero', {
     perView: 1
 });
 
-glide.mount()
+
 
 displayPetPhoto()
 displayMaternityPhoto()
 displayPortraitPhoto()
+
+glide.mount()
 
