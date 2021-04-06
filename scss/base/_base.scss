@@ -8,6 +8,7 @@
 }
 
 html {
+    
     font-size: 62.5%;
     /*10px percentage of default 16px font size */
     @include respond(phone) {
@@ -32,4 +33,14 @@ html {
 
 body{
     background-color: $color-white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
+.pagewrapper{
+    position: relative;
+    min-height: 100%;
+    
+}
+
+

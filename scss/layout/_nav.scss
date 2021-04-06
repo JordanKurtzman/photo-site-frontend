@@ -1,17 +1,19 @@
 .nav {
     background-color: $color-grey-pink;
+    height: 4.5rem;
     font-size: 2.7rem;
-    padding: 1rem;
     display: flex;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1;
+    align-items: center;
     &__mobile{
         display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        padding: .5 2.5rem;
         @include respond(tab-port){
             display: flex;
         }
