@@ -1,9 +1,18 @@
 .glide__image--container{
     width: 80%;
-    margin: 3.5rem auto 3.5rem auto;
+    margin: 2.5rem auto 2.5rem auto;
 }
 
 .glide__image{
     max-width: 100%;
     height: auto;
+}
+
+.glide__container{
+    width: 90%;
+    margin: 2.5rem auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-content: center;
 }
