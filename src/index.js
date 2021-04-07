@@ -1,5 +1,5 @@
 import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
-import Glide from "@glidejs/glide"
+import Glide, { Autoplay } from "@glidejs/glide"
 
 const toggleNav = document.querySelector('#toggleNav')
 const primaryMenu = document.querySelector('#primarymenu')
@@ -28,5 +28,5 @@ displayPetPhoto()
 displayMaternityPhoto()
 displayPortraitPhoto()
 
-glide.mount()
+glide.mount({ Autoplay })
 

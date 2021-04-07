@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="pagewrapper">
+    <div class="pagewrapper" id="contact-wrapper">
 
     
         <nav class="nav">
@@ -45,16 +45,18 @@
             </div>
         </nav>
         <div class="contact">
-
             <form id="contact" method="post" class="contact__form">
                 <h3 class="contact__form--heading">Contact</h3>
                 <p class="contact__form--paragraph">Currently operating out of Minot, North Dakota.
                 Soon to be in South Korea!</p>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Emaiil">
-                <input type="text" placeholder="Phone">
-
-
+                <input class="contact__form--input" type="text" placeholder="Name">
+                <input class="contact__form--input" type="text" placeholder="Email">
+                <input class="contact__form--input" type="text" placeholder="Phone">
+                <input class="contact__form--input" placeholder="Select session date" type="date">
+                <textarea class="contact__form--input" placeholder="Tell me about yourself!"></textarea>
+                <textarea class="contact__form--input" placeholder="What services are you interested in booking?"></textarea>
+                <textarea class="contact__form--input" placeholder="How did you hear about my business?"></textarea>
+                <input class="contact__form--input btn-contact" type="submit">
             </form>
         </div>
 

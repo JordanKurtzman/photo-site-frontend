@@ -29,13 +29,7 @@
     flex-direction: row;
     justify-content: space-around;
     
-    &--left{
-        
-    }
-    &--right{
-        
-
-    }
+    
 }
 
 .glide__arrow {
@@ -46,4 +40,25 @@
     cursor: pointer;
     border: none;
     
+}
+
+.btn-contact {
+    border: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: $color-grey-pink;
+    color: $color-white;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.btn-contact:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.btn-contact:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+
 }

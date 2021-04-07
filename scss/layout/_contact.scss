@@ -1,4 +1,71 @@
 .contact {
     display: flex;
-    flex-direction: column;
+    position: relative;
+    margin: 4.5rem auto;
+    width: 40%;
+    height: 75vh;
+    
+    @include respond(tabport){
+        width: 80%;
+    }
+    @include resize(mid){
+        width: 80%;
+    }
+    
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--input{
+            padding: 1.5rem;
+            font-family: 'Lato', sans-serif;
+            
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+            
+            resize: none;
+            @media (min-width: 75em){
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+                padding: 1rem;
+            }
+
+        }
+        &--input:not(:last-child){
+            border: 1px solid $color-medium-grey;
+            font-weight: 300;
+        }
+        &--input:focus{
+            outline: none;
+        }
+        &--heading{
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 3.5rem;
+            margin: 2.5rem auto;
+        }
+        &--paragraph{
+            font-weight: 300;
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+            margin: 1.5rem auto;
+        }
+    }
+}
+
+#contact-wrapper {
+    background-image: linear-gradient(to right bottom, rgba($color-light-grey, .6), rgba($color-medium-grey, .6)), url('/images/Portrait10-glide.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+input[type="date"]:before{
+    content: attr(placeholder) !important;
+    margin-right: 1rem;
+    
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before{
+    content: '';
 }

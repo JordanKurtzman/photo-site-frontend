@@ -72,7 +72,7 @@ body {
   background-color: #fafafa;
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
 }
 
 .pagewrapper {
@@ -127,6 +127,30 @@ body {
   outline: none;
   cursor: pointer;
   border: none;
+}
+
+.btn-contact {
+  border: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #dbc1bf;
+  color: #fafafa;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.btn-contact:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-contact:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .glide__image--container {
@@ -696,10 +720,87 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  margin: 4.5rem auto;
+  width: 40%;
+  height: 75vh;
+}
+
+@media (max-width: 48em) {
+  .contact {
+    width: 80%;
+  }
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact__form--input {
+  padding: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  resize: none;
+}
+
+@media (min-width: 75em) {
+  .contact__form--input {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    padding: 1rem;
+  }
+}
+
+.contact__form--input:not(:last-child) {
+  border: 1px solid #b5b5b5;
+  font-weight: 300;
+}
+
+.contact__form--input:focus {
+  outline: none;
+}
+
+.contact__form--heading {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3.5rem;
+  margin: 2.5rem auto;
+}
+
+.contact__form--paragraph {
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  margin: 1.5rem auto;
+}
+
+#contact-wrapper {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(219, 219, 219, 0.6)), to(rgba(181, 181, 181, 0.6))), url("/images/Portrait10-glide.jpg");
+  background-image: linear-gradient(to right bottom, rgba(219, 219, 219, 0.6), rgba(181, 181, 181, 0.6)), url("/images/Portrait10-glide.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  margin-right: 1rem;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: '';
 }
 
 /*!
