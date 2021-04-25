@@ -1,37 +1,21 @@
-const axios = require('axios')
+const normalizeResponse = (response) => {
+    const isSuccess = response.status === "mail_sent";
+    const message = response.message;
+    const validationError = isSuccess
+        ? {}
+        : Object.fromEntries(
+            response.invalid_fields.map((error) => {
+                const key = /cf7[-a-z]*.(.*)/.exec(error.into)[1];
 
-const getToken = async () => {
-    try{
-        let response = await axios.post('http://localhost:8000/wp-json/jwt-auth/v1/token', {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: 'JordanKurtzman',
-                password: 'Castor1234!'
+                return [key, error.message];
             })
-        })
-        localStorage.setItem('token', response.token)
-    }catch(error){
-        console.log(error)
-    }      
-}
+        );
 
-const sendFormData = async () => {
-    try{
-        let response = await axios.post('http://localhost8000:/wp/v2/form-submissions',{
-            headers: {
-                'content-type': 'application/json',
-                authorization: 'Bearer' + localStorage.getItem('token')
-            }
-        })
-        return response.json()
-        
-    }
-    catch(error){
-        console.log(error)
-    }
-}
+    return {
+        isSuccess,
+        message,
+        validationError
+    };
+};
 
-export {getToken, sendFormData}
+export { normalizeResponse }
