@@ -1,4 +1,4 @@
-import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
+// import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
 import Glide, { Autoplay } from "@glidejs/glide"
 import { normalizeResponse} from './contact'
 
@@ -17,9 +17,9 @@ dropdownBtn.addEventListener('click', () => {
     submenu.classList.toggle('dropdown')
 })
 
-displayPetPhoto()
-displayMaternityPhoto()
-displayPortraitPhoto()
+// displayPetPhoto()
+// displayMaternityPhoto()
+// displayPortraitPhoto()
 
 var glide = new Glide('#hero', {
     type: 'carousel',
@@ -29,35 +29,35 @@ var glide = new Glide('#hero', {
     perView: 1
 });
 
-const formSubmissionHandler = (event) => {
-    event.preventDefault();
+// const formSubmissionHandler = (event) => {
+//     event.preventDefault();
 
-    const formElement = event.target,
-        { action, method } = formElement,
-        body = new FormData(formElement);
+//     const formElement = event.target,
+//         { action, method } = formElement,
+//         body = new FormData(formElement);
 
-    fetch(action, {
-        method,
-        body
-    })
-        .then((response) => response.json())
-        // .then((response) => normalizeResponse(action, response))
-        .then((response) => {
-            alert(response.message);
+//     fetch(action, {
+//         method,
+//         body
+//     })
+//         .then((response) => response.json())
+//         // .then((response) => normalizeResponse(action, response))
+//         .then((response) => {
+//             alert(response.message);
 
-            if (response.isSuccess) {
-                formElement.reset();
-            }
-        })
-        .catch((error) => {
-            alert("Check the console for the error details.");
-            console.log(error);
-        });
-};
+//             if (response.isSuccess) {
+//                 formElement.reset();
+//             }
+//         })
+//         .catch((error) => {
+//             alert("Check the console for the error details.");
+//             console.log(error);
+//         });
+// };
 
-formElements.forEach((formElement) =>
-    formElement.addEventListener("submit", formSubmissionHandler)
-);
+// formElements.forEach((formElement) =>
+//     formElement.addEventListener("submit", formSubmissionHandler)
+// );
 
 
 glide.mount()

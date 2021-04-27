@@ -116,6 +116,12 @@
 #dropdown-a{
     text-transform: uppercase;
     cursor: pointer;
+    @include resize(mid){
+        padding: .5rem 2.5rem;
+    }
+    @include respond(tab-port){
+        padding: .5rem 2.5rem;
+    }
 }
 
 

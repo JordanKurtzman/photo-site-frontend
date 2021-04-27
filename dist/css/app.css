@@ -337,6 +337,18 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 48em) {
+  #dropdown-a {
+    padding: .5rem 2.5rem;
+  }
+}
+
+@media (max-device-width: 48em) {
+  #dropdown-a {
+    padding: .5rem 2.5rem;
+  }
+}
+
 .pricing {
   display: -webkit-box;
   display: -ms-flexbox;
