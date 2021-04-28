@@ -27,5 +27,19 @@
         font-size: 2rem;
         padding: 1.5rem;
     }
+    &__link--p{
+        color: $color-white;
+        font-size: 2rem;
+        padding: 1.5rem;
+        text-transform: uppercase;
+        @include respond(phone){
+            text-transform: none;
+        }
+        @include resize(skinny){
+            text-transform: none;
+        }
+
+    }
+
     
 }

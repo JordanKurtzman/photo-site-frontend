@@ -86,7 +86,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   color: #fafafa;
-  background-color: #dbc1bf;
+  background-color: #9fa5d6;
   text-decoration: none;
   padding: 2rem;
   border-radius: 5px;
@@ -133,7 +133,7 @@ body {
   border: none;
   text-transform: uppercase;
   font-weight: 400;
-  background-color: #dbc1bf;
+  background-color: #8c9fff;
   color: #fafafa;
   width: 30%;
   border-radius: 5px;
@@ -179,7 +179,7 @@ body {
 }
 
 .nav {
-  background-color: #dbc1bf;
+  background-color: #9fa5d6;
   height: 4.5rem;
   font-size: 2.7rem;
   display: -webkit-box;
@@ -260,7 +260,7 @@ body {
   }
   .nav__menu.active li {
     display: block;
-    background-color: #dbc1bf;
+    background-color: #9fa5d6;
   }
   .nav__menu.active a {
     display: block;
@@ -306,7 +306,7 @@ body {
 }
 
 .nav__submenu--item:hover {
-  background-color: #ffe5e3;
+  background-color: #dee2ff;
 }
 
 .nav__submenu a:link, .nav__submenu a:visited, .nav__submenu a:active {
@@ -314,7 +314,7 @@ body {
   text-decoration: none;
   padding: .5rem 2.5rem;
   text-transform: uppercase;
-  color: #ffe5e3;
+  color: #dee2ff;
 }
 
 .nav__submenu a:hover {
@@ -328,7 +328,7 @@ body {
   .nav__submenu--item {
     display: block;
     background: #b5b5b5;
-    color: #ffe5e3;
+    color: #dee2ff;
   }
 }
 
@@ -628,12 +628,12 @@ body {
 
 .about__text--paragraph a:link, .about__text--paragraph a:visited, .about__text--paragraph a:active {
   text-decoration: none;
-  color: #ed9f9f;
+  color: #7987e0;
 }
 
 .about__text--paragraph a:hover {
   font-weight: 400;
-  color: #ffe5e3;
+  color: #dee2ff;
 }
 
 .portfolio {
@@ -692,7 +692,7 @@ body {
     z-index: 999;
   }
   .portfolio__piece--image:hover {
-    border: solid #ffe5e3 5px;
+    border: solid #dee2ff 5px;
   }
 }
 
@@ -706,7 +706,7 @@ body {
 }
 
 .footer {
-  background-color: #dbc1bf;
+  background-color: #9fa5d6;
   height: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,6 +747,25 @@ body {
 .footer__link--icons {
   font-size: 2rem;
   padding: 1.5rem;
+}
+
+.footer__link--p {
+  color: #fafafa;
+  font-size: 2rem;
+  padding: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media (max-device-width: 36em) {
+  .footer__link--p {
+    text-transform: none;
+  }
+}
+
+@media (max-width: 36em) {
+  .footer__link--p {
+    text-transform: none;
+  }
 }
 
 .contact {
