@@ -24,7 +24,7 @@ dropdownBtn.addEventListener('click', () => {
 var glide = new Glide('#hero', {
     type: 'carousel',
     animationDuration: 2000,
-    autoplay: 2000,
+    autoplay: 4000,
     focusAt: 'center',
     perView: 1
 });
