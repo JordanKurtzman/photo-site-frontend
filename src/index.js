@@ -17,9 +17,9 @@ dropdownBtn.addEventListener('click', () => {
     submenu.classList.toggle('dropdown')
 })
 
-// displayPetPhoto()
-// displayMaternityPhoto()
-// displayPortraitPhoto()
+displayPetPhoto()
+displayMaternityPhoto()
+displayPortraitPhoto()
 
 var glide = new Glide('#hero', {
     type: 'carousel',
