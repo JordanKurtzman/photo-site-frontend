@@ -1,6 +1,6 @@
 const displayPetPhoto = async () => {
     try{
-        const response = await fetch('http://api.chloemedranophotography.com/wp-json/wp/v2/media?search=pets')
+        const response = await fetch('https://api.chloemedranophotography.com/wp-json/wp/v2/media?search=pets')
         const petPictures = await response.json()
         console.log(petPictures)
         const container = document.querySelector('#pets')
@@ -24,7 +24,7 @@ const displayPetPhoto = async () => {
 
 const displayMaternityPhoto = async () => {
     try{
-        const response = await fetch('http://api.chloemedranophotography.com/wp-json/wp/v2/media?search=maternity')
+        const response = await fetch('https://api.chloemedranophotography.com/wp-json/wp/v2/media?search=maternity')
         const maternityPictures = await response.json()
         console.log(maternityPictures)
         const container = document.querySelector('#maternity')
@@ -50,7 +50,7 @@ const displayMaternityPhoto = async () => {
 
 const displayPortraitPhoto = async () => {
     try{
-        const response = await fetch('http://api.chloemedranophotography.com/wp-json/wp/v2/media?search=portrait')
+        const response = await fetch('https://api.chloemedranophotography.com/wp-json/wp/v2/media?search=portrait')
         const portraitPictures = await response.json()
         console.log(portraitPictures)
         const container = document.querySelector('#portrait')
