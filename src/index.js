@@ -1,4 +1,4 @@
-// import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
+import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
 import Glide, { Autoplay } from "@glidejs/glide"
 import { normalizeResponse} from './contact'
 
