@@ -1,6 +1,6 @@
 const displayPetPhoto = async () => {
     try{
-        const response = await fetch('https://api.chloemedranophotography.com/wp-json/wp/v2/media?search=pets')
+        const response = await fetch('http://api.chloemedranophotography.com/wp-json/wp/v2/media?search=pets')
         const petPictures = await response.json()
         console.log(petPictures)
         const container = document.querySelector('#pets')
