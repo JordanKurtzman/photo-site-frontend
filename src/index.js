@@ -5,8 +5,6 @@ const toggleNav = document.querySelector('#toggleNav')
 const primaryMenu = document.querySelector('#primarymenu')
 const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
-const submitBtn = document.querySelector('#btnSubmit')
-const formElements = document.querySelectorAll("form");
 
 
 toggleNav.addEventListener('click', () => {
@@ -31,87 +29,22 @@ var glide = new Glide('#hero', {
 
 
 
+formElements.addEventListener('wpcf7submit', function (event) {
+    e.preventDefault()
+    alert("Fire!");
+}, false);
 
 glide.mount()
 
+formElem.onsubmit = async (e) => {
+    e.preventDefault();
 
-const stripHtml = (string) => string.replace(/(<([^>]+)>)/gi, "");
+    let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
+        method: 'POST',
+        body: new FormData(formElem)
+    });
+    let result = await response.json()
+    return result
 
-const initialState = {
-    isSuccess: false,
-    message: "",
-    validationError: {}
+
 };
-
-const normalizeResponse = (url, response) => {
-    if (
-        url.match(/wp-json\/contact-form-7\/v1\/contact-forms\/\d+\/feedback/)
-    ) {
-        return normalizeContactForm7Response(response);
-    }
-    return {
-        ...initialState,
-        ...{
-            message: "Are you submitting to the right URL?"
-        }
-    };
-};
-
-const normalizeContactForm7Response = (response) => {
-    const isSuccess = response.status === "mail_sent";
-    const message = response.message;
-    const validationError = isSuccess
-        ? {}
-        : Object.fromEntries(
-            response.invalid_fields.map((error) => {
-                const key = /cf7[-a-z]*.(.*)/.exec(error.into)[1];
-
-                return [key, error.message];
-            })
-        );
-
-    return {
-        isSuccess,
-        message,
-        validationError
-    };
-};
-
-const wpForm = () => {
-    return {
-        ...initialState,
-        submit() {
-            const formElement = this.$refs.form,
-                { action, method } = formElement,
-                body = new FormData(formElement);
-
-            fetch(action, {
-                method,
-                body
-            })
-                .then((response) => response.json())
-                .then((response) => normalizeResponse(action, response))
-                .then((response) => {
-                    this.updateState(response);
-
-                    if (this.isSuccess) {
-                        formElement.reset();
-                    }
-                })
-                .catch((error) => {
-                    this.updateState({
-                        ...initialState,
-                        ...{
-                            message: "Check the console for the error details."
-                        }
-                    });
-                    console.log(error);
-                });
-        },
-        updateState(newState) {
-            Object.keys(newState).forEach((key) => (this[key] = newState[key]));
-        }
-    };
-};
-
-window.wpForm = wpForm;
