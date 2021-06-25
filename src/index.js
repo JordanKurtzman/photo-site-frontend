@@ -44,7 +44,5 @@ formElem.onsubmit = async (e) => {
         body: new FormData(formElem)
     });
     let result = await response.json()
-    return result
-
-
+    alert(result.message)
 };
