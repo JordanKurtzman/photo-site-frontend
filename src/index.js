@@ -29,11 +29,6 @@ var glide = new Glide('#hero', {
 
 
 
-formElements.addEventListener('wpcf7submit', function (event) {
-    e.preventDefault()
-    alert("Fire!");
-}, false);
-
 glide.mount()
 
 formElem.onsubmit = async (e) => {
