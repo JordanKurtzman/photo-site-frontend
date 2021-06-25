@@ -5,7 +5,7 @@ const toggleNav = document.querySelector('#toggleNav')
 const primaryMenu = document.querySelector('#primarymenu')
 const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
-
+const formElem = document.getElementById('#formElem')
 
 toggleNav.addEventListener('click', () => {
     primaryMenu.classList.toggle('active')
