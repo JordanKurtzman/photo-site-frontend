@@ -6,6 +6,7 @@ const primaryMenu = document.querySelector('#primarymenu')
 const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
 const formElem = document.getElementById('#formElem')
+const messageArea = document.getElementById('#messageArea')
 
 toggleNav.addEventListener('click', () => {
     primaryMenu.classList.toggle('active')
@@ -43,6 +44,10 @@ const submitFormData = async (e) => {
         });
         let result = await response.json()
         alert(result.message)
+        e.target.value.reset()
+        const successMessage = document.createElement('p')
+        successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
+        messageArea.appendChild(successMessage)
     }
     catch (error) {
         console.log(error)

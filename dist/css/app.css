@@ -182,6 +182,13 @@ body {
   display: none;
 }
 
+#messageArea {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  padding: 2rem;
+  width: 60%;
+}
+
 .nav {
   background-color: #9fa5d6;
   height: 4.5rem;
