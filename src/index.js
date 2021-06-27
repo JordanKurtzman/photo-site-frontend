@@ -34,7 +34,7 @@ glide.mount()
 
 
 
-formElem.addEventListener('submit', (e) => {
+const submitFormData = async (e) => {
     e.preventDefault()
     try {
         let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
@@ -48,7 +48,7 @@ formElem.addEventListener('submit', (e) => {
         console.log(error)
     }
     
-})
+}
 
 
 
