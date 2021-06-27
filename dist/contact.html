@@ -43,7 +43,7 @@
             </div>
         </nav>
         <div class="contact">
-            <form onsubmit="submitFormData();" id="formElem" method="post" class="contact__form">
+            <form action="https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback" id="formElem" method="post" class="contact__form" target="formTarget">
                 <h3 class="contact__form--heading">Contact</h3>
                 <p class="contact__form--paragraph">Currently operating out of Minot, North Dakota.
                 Soon to be in South Korea!</p>
@@ -57,6 +57,8 @@
                 <input id="btnSubmit" class="contact__form--input btn-contact" type="submit" name="submit">
             </form>   
         </div>
+        <iframe name="formTarget" class="formtarget"></iframe>
+
 
                         <section class="footer">
                             <div class="footer__links">

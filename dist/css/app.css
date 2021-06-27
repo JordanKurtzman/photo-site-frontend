@@ -178,6 +178,10 @@ body {
       align-content: center;
 }
 
+.formtarget {
+  display: none;
+}
+
 .nav {
   background-color: #9fa5d6;
   height: 4.5rem;
