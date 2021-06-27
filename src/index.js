@@ -32,37 +32,37 @@ var glide = new Glide('#hero', {
 glide.mount()
 
 
-// const submitFormData = async () => {
-//     let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
-//         method: 'POST',
-//         body: new FormData(formElem)
-//     });
-//     let result = await response.json()
-//     alert(result.message)
-// }
-
-// formElem.addEventListener('submit', (e) => {
-//     e.preventDefault()
-//     submitFormData()
-// })
-
-
+const submitFormData = async () => {
+    try{
+        let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
+            method: 'POST',
+            body: new FormData(formElem)
+        });
+        let result = await response.json()
+        alert(result.message)
+    }
+    catch(error){
+        console.log(error)
+    }
+}
 
 formElem.addEventListener('submit', (e) => {
     e.preventDefault()
-
-    const formData = new FormData(this)
-    fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback',
-    {
-        method: 'post',
-        body: formData
-    }).then((response)=>{
-        return response.text()
-    }).then((text) =>{
-        alert(text.message)
-    }).catch((error)=>{
-        alert(error)
-    })
-
-
+    submitFormData()
 })
+
+
+
+//     const formData = new FormData(this)
+//     fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback',
+//     {
+//         method: 'post',
+//         body: formData
+//     }).then((response)=>{
+//         return response.text()
+//     }).then((text) =>{
+//         alert(text.message)
+//     }).catch((error)=>{
+//         alert(error)
+//     })
+// })
