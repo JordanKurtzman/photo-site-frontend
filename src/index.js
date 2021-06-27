@@ -32,8 +32,11 @@ var glide = new Glide('#hero', {
 glide.mount()
 
 
-const submitFormData = async () => {
-    try{
+
+
+formElem.addEventListener('submit', (e) => {
+    e.preventDefault()
+    try {
         let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
             method: 'POST',
             body: new FormData(formElem)
@@ -41,14 +44,10 @@ const submitFormData = async () => {
         let result = await response.json()
         alert(result.message)
     }
-    catch(error){
+    catch (error) {
         console.log(error)
     }
-}
-
-formElem.addEventListener('submit', (e) => {
-    e.preventDefault()
-    submitFormData()
+    
 })
 
 
