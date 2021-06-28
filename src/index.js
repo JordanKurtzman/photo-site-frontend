@@ -32,28 +32,35 @@ var glide = new Glide('#hero', {
 
 glide.mount()
 
+formElem.addEventListener('submit', (e) => {
+    let request = new XMLHttpRequest()
+    request.open("POST", 'https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback')
+    let formData = new FormData(formElem)
+    request.send(formData)
+    formElem.reset()
+})
 
 
 
-const submitFormData = async (e) => {
-    e.preventDefault()
-    try {
-        let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
-            method: 'POST',
-            body: new FormData(formElem)
-        });
-        let result = await response.json()
-        alert(result.message)
-        e.target.value.reset()
-        const successMessage = document.createElement('p')
-        successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
-        messageArea.appendChild(successMessage)
-    }
-    catch (error) {
-        console.log(error)
-    }
+// const submitFormData = async (e) => {
+//     e.preventDefault()
+//     try {
+//         let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
+//             method: 'POST',
+//             body: new FormData(formElem)
+//         });
+//         let result = await response.json()
+//         alert(result.message)
+//         formElem.reset()
+//         // const successMessage = document.createElement('p')
+//         // successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
+//         // messageArea.appendChild(successMessage)
+//     }
+//     catch (error) {
+//         console.log(error)
+//     }
     
-}
+// }
 
 
 
