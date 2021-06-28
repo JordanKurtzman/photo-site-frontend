@@ -33,11 +33,12 @@ var glide = new Glide('#hero', {
 glide.mount()
 
 formElem.addEventListener('submit', (e) => {
+    formElem.reset()
     let request = new XMLHttpRequest()
     request.open("POST", 'https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback')
     let formData = new FormData(formElem)
     request.send(formData)
-    formElem.reset()
+
 })
 
 
