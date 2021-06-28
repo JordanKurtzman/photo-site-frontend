@@ -63,8 +63,11 @@ const submitFormData = async () => {
 }
 
 formElem.addEventListener('submit', (e) => {
-    formElem.reset()
     submitFormData()
+    formElem.style.classList.add('submitted')
+    const successMessage = document.createElement('p')
+    successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
+    messageArea.appendChild(successMessage)
 })
 
 
