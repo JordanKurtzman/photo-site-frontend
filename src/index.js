@@ -41,33 +41,40 @@ glide.mount()
 //     formElem.reset()
 // })
 
-
-
-const submitFormData = async () => {
-    try {
-        let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
-            method: 'POST',
-            body: new FormData(formElem)
-        });
-        let result = await response.json()
-        alert(result.message)
-        formElem.reset()
-        // const successMessage = document.createElement('p')
-        // successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
-        // messageArea.appendChild(successMessage)
-    }
-    catch (error) {
-        console.log(error)
-    }
-    
+const submitFormData = () => {
+    let request = new XMLHttpRequest()
+    request.open("POST", 'https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback')
+    let formData = new FormData(formElem)
+    request.send(formData)
+    formElem.reset()
 }
+
+
+// const submitFormData = async () => {
+//     try {
+//         let response = await fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback', {
+//             method: 'POST',
+//             body: new FormData(formElem)
+//         });
+//         let result = await response.json()
+//         alert(result.message)
+//         // const successMessage = document.createElement('p')
+//         // successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
+//         // messageArea.appendChild(successMessage)
+//     }
+//     catch (error) {
+//         console.log(error)
+//     }
+    
+// }
 
 formElem.addEventListener('submit', (e) => {
     submitFormData()
-    formElem.style.classList.add('submitted')
-    const successMessage = document.createElement('p')
-    successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
-    messageArea.appendChild(successMessage)
+    // formElem.style.classList.add('submitted')
+    // const successMessage = document.createElement('p')
+    // successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
+    // messageArea.appendChild(successMessage)
+    e.target.reset()
 })
 
 
