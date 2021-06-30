@@ -62,9 +62,6 @@ const submitFormData = () => {
     xmlhttp.send(formData)
 }
 
-const resetForm = () => {
-    formElem.reset()
-}
 
 formElem.addEventListener('submit', (e) => {
     e.preventDefault()
