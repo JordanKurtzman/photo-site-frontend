@@ -63,11 +63,11 @@ const submitFormData = () => {
 }
 
 
-const handleFormData = () => {
+formElem.addEventListener('submit', (e) => {
     e.preventDefault()
     submitFormData()
     formElem.reset()
-}
+})
 
 
 
