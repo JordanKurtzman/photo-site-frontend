@@ -9,6 +9,7 @@ const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
 const formElem = document.getElementById('formElem')
 const messageArea = document.getElementById('messageArea')
+const datePicker = document.getElementById('preferred-date')
 
 window.$ = $;
 window.jQuery = jQuery;
@@ -77,9 +78,12 @@ $(document).ready(function(){
             type: "post",
             data: new FormData(this)
         })
-        .done(function (){
-        $('#formElem')[0].reset();
-        })    
+        .done(resetForm());    
     })
-})
-
+    function resetForm($form) {
+        $form.find('input:text, input:password, input:file, select, textarea').val('');
+        $('datePicker').val('')
+                .attr('type', 'text')
+                .attr('type', 'date');
+    }
+});
