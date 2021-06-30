@@ -43,7 +43,7 @@ glide.mount()
 
 
 
-const submitFormData = () => {
+formElem.addEventListener('submit',(e) => {
     let xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {
@@ -64,7 +64,8 @@ const submitFormData = () => {
     xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
     let formData = new FormData(formElem)
     xmlhttp.send(formData)
-}
+    formElem.reset()
+}) 
 
 
 
@@ -87,30 +88,5 @@ const submitFormData = () => {
     
 // }
 
-formElem.addEventListener('submit', (e) => {
-    e.preventDefault()
-    submitFormData()
-    document.forms.contactForm.reset()
-    // formElem.style.classList.add('submitted')
-    // const successMessage = document.createElement('p')
-    // successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
-    // messageArea.appendChild(successMessage)
-    
-})
 
 
-
-
-//     const formData = new FormData(this)
-//     fetch('https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback',
-//     {
-//         method: 'post',
-//         body: formData
-//     }).then((response)=>{
-//         return response.text()
-//     }).then((text) =>{
-//         alert(text.message)
-//     }).catch((error)=>{
-//         alert(error)
-//     })
-// })
