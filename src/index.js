@@ -81,7 +81,7 @@ $(document).ready(function(){
         .done(resetForm());    
     })
     function resetForm($form) {
-        $form.find('input:text, input:password, input:file, select, textarea').val('');
+        $form.find('input:text, input:tel, input:file, select, textarea').val('');
         $('datePicker').val('')
                 .attr('type', 'text')
                 .attr('type', 'date');
