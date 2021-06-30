@@ -76,9 +76,10 @@ $(document).ready(function(){
             url: "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback",
             type: "post",
             data: new FormData(this)
-        });
-        $(this).find("input").val('');
-        $(this).find('input:date').removeAttr('selected');
+        })
+        .done(function (){
+        $('#formElem')[0].reset();
+        })    
     })
 })
 
