@@ -66,6 +66,9 @@ const submitFormData = () => {
     xmlhttp.send(formData)
 }
 
+const resetFormData = () => {
+    formElem.reset()
+}
 
 
 // const submitFormData = async () => {
@@ -89,12 +92,14 @@ const submitFormData = () => {
 formElem.addEventListener('submit', (e) => {
     e.preventDefault()
     submitFormData()
+    resetFormData()
     // formElem.style.classList.add('submitted')
     // const successMessage = document.createElement('p')
     // successMessage.textContent = 'Thanks for getting in touch! We will get in touch with you shortly.'
     // messageArea.appendChild(successMessage)
-    e.target.reset()
+    
 })
+
 
 
 
