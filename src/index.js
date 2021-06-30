@@ -5,8 +5,8 @@ const toggleNav = document.querySelector('#toggleNav')
 const primaryMenu = document.querySelector('#primarymenu')
 const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
-const formElem = document.getElementById('#formElem')
-const messageArea = document.getElementById('#messageArea')
+const formElem = document.getElementById('formElem')
+const messageArea = document.getElementById('messageArea')
 
 toggleNav.addEventListener('click', () => {
     primaryMenu.classList.toggle('active')
@@ -60,7 +60,7 @@ formElem.addEventListener('submit',(e) => {
     xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
     let formData = new FormData(formElem)
     xmlhttp.send(formData)
-    formElem.classList.add('contact__form--hidden')
+    formElem.reset()
 }) 
 
 
