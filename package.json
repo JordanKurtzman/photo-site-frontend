@@ -14,8 +14,10 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@glidejs/glide": "^3.4.1",
+    "ajax": "0.0.4",
     "axios": "^0.21.1",
     "express": "^4.17.1",
+    "jquery": "^3.6.0",
     "live-server": "^1.2.1",
     "node-sass": "^5.0.0"
   },
