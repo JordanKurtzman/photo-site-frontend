@@ -48,11 +48,7 @@ formElem.addEventListener('submit',(e) => {
 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {   // XMLHttpRequest.DONE == 4
-            if (xmlhttp.status == 200) {
-                const successMessage = 'Thanks for getting in touch! We will get in touch with you shortly.'
-                messageArea.innerHTML = successMessage;
-            }
-            else if (xmlhttp.status == 400) {
+            if (xmlhttp.status == 400) {
                 alert('There was an error 400');
             }
             else {
@@ -64,7 +60,7 @@ formElem.addEventListener('submit',(e) => {
     xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
     let formData = new FormData(formElem)
     xmlhttp.send(formData)
-    formElem.reset()
+    formElem.classList.add('submitted')
 }) 
 
 
