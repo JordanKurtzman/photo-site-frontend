@@ -67,8 +67,9 @@ const resetForm = () => {
 }
 
 formElem.addEventListener('submit', (e) => {
+    e.preventDefault()
     submitFormData()
-    formElem.classList.add('contact__form--hidden')
+    formElem.reset()
 })
 
 
