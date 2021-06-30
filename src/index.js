@@ -56,18 +56,18 @@ const submitFormData = () => {
             }
         }
     };
-
+    e.preventDefault()
     xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
     let formData = new FormData(formElem)
     xmlhttp.send(formData)
 }
 
 
-formElem.addEventListener('submit', (e) => {
+const handleFormData = () => {
     e.preventDefault()
     submitFormData()
     formElem.reset()
-})
+}
 
 
 
