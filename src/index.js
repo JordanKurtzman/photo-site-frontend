@@ -43,7 +43,7 @@ glide.mount()
 
 
 
-formElem.addEventListener('submit',(e) => {
+const submitFormData = () => {
     let xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {
@@ -60,8 +60,17 @@ formElem.addEventListener('submit',(e) => {
     xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
     let formData = new FormData(formElem)
     xmlhttp.send(formData)
+}
+
+const resetForm = () => {
     formElem.reset()
-}) 
+}
+
+formElem.addEventListener('submit', (e) => {
+    e.preventDefault()
+    submitFormData()
+    resetForm()
+})
 
 
 
