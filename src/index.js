@@ -77,7 +77,8 @@ $(document).ready(function(){
             type: "post",
             data: new FormData(this)
         });
-        $('#formElem').trigger('reset');
+        $(this).find("input").val('');
+        $(this).find('input:date').removeAttr('selected');
     })
 })
 
