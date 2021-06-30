@@ -67,7 +67,6 @@ const resetForm = () => {
 }
 
 formElem.addEventListener('submit', (e) => {
-    e.preventDefault()
     submitFormData()
     resetForm()
 })
