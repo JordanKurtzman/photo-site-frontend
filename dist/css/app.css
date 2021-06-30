@@ -192,10 +192,6 @@ body {
   display: flex;
 }
 
-.submitted {
-  display: none;
-}
-
 .nav {
   background-color: #9fa5d6;
   height: 4.5rem;
@@ -813,6 +809,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.contact__form--hidden {
+  display: none;
 }
 
 .contact__form--input {
