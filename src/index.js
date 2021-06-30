@@ -41,13 +41,31 @@ glide.mount()
 //     formElem.reset()
 // })
 
+
+
 const submitFormData = () => {
-    let request = new XMLHttpRequest()
-    request.open("POST", 'https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback')
+    let xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {   // XMLHttpRequest.DONE == 4
+            if (xmlhttp.status == 200) {
+                const successMessage = 'Thanks for getting in touch! We will get in touch with you shortly.'
+                messageArea.innerHTML = successMessage;
+            }
+            else if (xmlhttp.status == 400) {
+                alert('There was an error 400');
+            }
+            else {
+                alert('something else other than 200 was returned');
+            }
+        }
+    };
+
+    xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
     let formData = new FormData(formElem)
-    request.send(formData)
-    formElem.reset()
+    xmlhttp.send(formData)
 }
+
 
 
 // const submitFormData = async () => {
@@ -69,6 +87,7 @@ const submitFormData = () => {
 // }
 
 formElem.addEventListener('submit', (e) => {
+    e.preventDefault()
     submitFormData()
     // formElem.style.classList.add('submitted')
     // const successMessage = document.createElement('p')
