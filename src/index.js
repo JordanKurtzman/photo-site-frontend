@@ -68,6 +68,7 @@ $(document).ready(function(){
     })
     function resetForm($form) {
         $form.get(0).reset();
+        ("<p id='successMessage'>Thanks for contacting me! I'll get in touch with you shortly.</p>").appendTo('messageArea');
     }
 });
 
