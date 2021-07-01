@@ -67,9 +67,8 @@ $(document).ready(function(){
         });    
     })
     function resetForm($form) {
-        $form.find('input:text, input:tel, input:file, select, textarea').val('');
-        $('datePicker').val('').attr('type', 'text').attr('type', 'date');
-    }s
+        $form.get(0).reset();
+    }
 });
 
 var glide = new Glide('#hero', {
