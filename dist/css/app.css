@@ -178,10 +178,6 @@ body {
       align-content: center;
 }
 
-.formtarget {
-  display: none;
-}
-
 #messageArea {
   font-size: 1.7rem;
   line-height: 2.2rem;
