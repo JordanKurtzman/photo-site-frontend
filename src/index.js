@@ -71,11 +71,14 @@ glide.mount()
 
 $(document).ready(function(){
     const $form = $('#formElem').on('submit', function (e) {
+
         e.preventDefault();
+        
         let data = new FormData(this);
+        
         let request = $.ajax({
             url: "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback",
-            type: "post",
+            type: "POST",
             data: data,
             contentType: false,
             processData: false
@@ -85,6 +88,7 @@ $(document).ready(function(){
         });    
     })
     function resetForm($form) {
-        $form.get(0).reset();
+        $form.find('input:text, input:tel, input:file, select, textarea').val('');
+        $('datePicker').val('').attr('type', 'text').attr('type', 'date');
     }
 });
