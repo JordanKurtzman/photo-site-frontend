@@ -1,6 +1,7 @@
+import $ from "jquery";
 import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
 import Glide, { Autoplay } from "@glidejs/glide"
-import {$, jQuery} from 'jquery'
+
 
 
 const toggleNav = document.querySelector('#toggleNav')
@@ -11,8 +12,6 @@ const formElem = document.getElementById('formElem')
 const messageArea = document.getElementById('messageArea')
 const datePicker = document.getElementById('preferred-date')
 
-window.$ = $;
-window.jQuery = jQuery;
 
 toggleNav.addEventListener('click', () => {
     primaryMenu.classList.toggle('active')
