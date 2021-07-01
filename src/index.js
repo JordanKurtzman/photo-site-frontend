@@ -26,51 +26,51 @@ displayMaternityPhoto()
 displayPortraitPhoto()
 
 
-const submitFormData = (e) => {
-    e.preventDefault()
-    let xmlhttp = new XMLHttpRequest();
+// const submitFormData = (e) => {
+//     e.preventDefault()
+//     let xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4) {   // XMLHttpRequest.DONE == 4
-            if (xmlhttp.status == 400) {
-                alert('There was an error 400');
-            }
-            else {
-                alert('something else other than 200 was returned');
-            }
-        }
-    };
+//     xmlhttp.onreadystatechange = function () {
+//         if (xmlhttp.readyState == 4) {   // XMLHttpRequest.DONE == 4
+//             if (xmlhttp.status == 400) {
+//                 alert('There was an error 400');
+//             }
+//             else {
+//                 alert('something else other than 200 was returned');
+//             }
+//         }
+//     };
     
-    xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
-    let formData = new FormData(formElem)
-    xmlhttp.send(formData)
-    e.target.reset()
-}
+//     xmlhttp.open("POST", "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback", true);
+//     let formData = new FormData(formElem)
+//     xmlhttp.send(formData)
+//     e.target.reset()
+// }
 
 
-// $(document).ready(function(){
-//     const $form = $('#formElem').on('submit', function (e) {
+$(document).ready(function(){
+    const $form = $('#formElem').on('submit', function (e) {
 
-//         e.preventDefault();
+        e.preventDefault();
 
-//         let data = new FormData(this);
+        let data = new FormData(this);
         
-//         let request = $.ajax({
-//             url: "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback",
-//             type: "POST",
-//             data: data,
-//             contentType: false,
-//             processData: false
-//         })
-//         .done(function(){
-//             resetForm($form)
-//         });    
-//     })
-//     function resetForm($form) {
-//         $form.find('input:text, input:tel, input:file, select, textarea').val('');
-//         $('datePicker').val('').attr('type', 'text').attr('type', 'date');
-//     }s
-// });
+        let request = $.ajax({
+            url: "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback",
+            type: "POST",
+            data: data,
+            contentType: false,
+            processData: false
+        })
+        .done(function(){
+            resetForm($form)
+        });    
+    })
+    function resetForm($form) {
+        $form.find('input:text, input:tel, input:file, select, textarea').val('');
+        $('datePicker').val('').attr('type', 'text').attr('type', 'date');
+    }s
+});
 
 var glide = new Glide('#hero', {
     type: 'carousel',
