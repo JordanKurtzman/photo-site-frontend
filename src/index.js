@@ -77,7 +77,9 @@ $(document).ready(function(){
         let request = $.ajax({
             url: "https://api.chloemedranophotography.com/wp-json/contact-form-7/v1/contact-forms/54/feedback",
             type: "post",
-            data: data
+            data: data,
+            contentType: false,
+            processData: false
         })
         .done(function(){
             resetForm($form)
