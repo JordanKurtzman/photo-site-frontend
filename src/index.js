@@ -39,7 +39,9 @@ $(document).ready(function(){
             data: data,
             contentType: false,
             processData: false,
-            success: window.location.replace('www.chloemedranophotography.com/thankyou.html')
+            success: function(data){
+                window.location.replace('https://www.chloemedranophotography.com/thankyou.html')
+            }
         })
         .done(function(){
             resetForm($form);
