@@ -64,11 +64,14 @@ $(document).ready(function(){
         .done(function(){
             resetForm($form);
             const messageArea = document.getElementById('messageArea');
-            $(messageArea).append("<p>Thanks for contacting me! I'll be in touch shortly.<p>");
+            if$(messageArea).is(':empty');{
+                $(messageArea).append("<p>Thanks for contacting me! I'll be in touch shortly.<p>")
+            }
         });    
     })
     function resetForm($form) {
         $form.get(0).reset();
+        
     }
 });
 
