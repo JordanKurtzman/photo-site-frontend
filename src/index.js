@@ -40,7 +40,7 @@ $(document).ready(function(){
             contentType: false,
             processData: false,
             success: function(data){
-                window.location.replace('https://www.chloemedranophotography.com/thankyou.html')
+                window.location.replace('/thankyou.html')
             }
         })
         .done(function(){
