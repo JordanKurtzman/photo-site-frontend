@@ -178,14 +178,15 @@ body {
       align-content: center;
 }
 
-#messageArea {
-  font-size: 1.7rem;
+.thankyou {
+  font-size: 2.5rem;
   line-height: 2.2rem;
   padding: 2rem;
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
 }
 
 .nav {

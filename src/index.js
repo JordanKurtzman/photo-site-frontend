@@ -38,7 +38,8 @@ $(document).ready(function(){
             type: "POST",
             data: data,
             contentType: false,
-            processData: false
+            processData: false,
+            success: window.location.replace('www.chloemedranophotography.com/thankyou.html')
         })
         .done(function(){
             resetForm($form);
