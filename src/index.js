@@ -63,10 +63,7 @@ $(document).ready(function(){
         })
         .done(function(){
             resetForm($form);
-            const messageArea = document.getElementById('messageArea');
-            if($(messageArea).html().length === 0);{
-                $(messageArea).append("<p>Thanks for contacting me! I'll be in touch shortly.<p>")
-            }
+            
         });    
     })
     function resetForm($form) {
