@@ -182,7 +182,7 @@ body {
   font-size: 1.7rem;
   line-height: 2.2rem;
   padding: 2rem;
-  width: 60%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,7 +823,7 @@ body {
   .contact__form--input {
     font-size: 1.5rem;
     line-height: 1.7rem;
-    padding: 1rem;
+    padding: 1.2rem;
   }
 }
 
