@@ -9,7 +9,6 @@ const primaryMenu = document.querySelector('#primarymenu')
 const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
 const formElem = document.getElementById('formElem')
-const messageArea = document.getElementById('messageArea')
 const datePicker = document.getElementById('preferred-date')
 
 
@@ -63,12 +62,13 @@ $(document).ready(function(){
             processData: false
         })
         .done(function(){
-            resetForm($form)
+            resetForm($form);
+            const messageArea = document.getElementById('messageArea');
+            $(messageArea).append("<p>Thanks for contacting me! I'll be in touch shortly.<p>");
         });    
     })
     function resetForm($form) {
         $form.get(0).reset();
-        ("<p id='successMessage'>Thanks for contacting me! I'll get in touch with you shortly.</p>").appendTo('messageArea');
     }
 });
 
