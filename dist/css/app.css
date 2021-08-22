@@ -509,6 +509,12 @@ body {
   padding: 2rem 4rem;
 }
 
+.service__text h2 {
+  padding: 0 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .main {
   display: -ms-grid;
   display: grid;

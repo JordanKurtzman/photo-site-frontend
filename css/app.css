@@ -284,10 +284,6 @@ body {
       text-align: center; } }
   .service__text p {
     padding: 0 4rem; }
-  .service__text h2 {
-    padding: 0 4rem;
-    font-weight: 300;
-    text-transform: uppercase; }
 
 .service__image {
   max-width: 100%;
@@ -313,6 +309,11 @@ body {
 
 .service__btn {
   padding: 2rem 4rem; }
+
+.service__text h2 {
+  padding: 0 4rem;
+  font-weight: 300;
+  text-transform: uppercase; }
 
 .main {
   display: grid;
