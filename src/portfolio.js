@@ -1,6 +1,6 @@
-const displayPetPhoto = async () => {
+const displayCouplePhoto = async () => {
     try{
-        const response = await fetch('https://api.chloemedranophotography.com/wp-json/wp/v2/media?search=pets')
+        const response = await fetch('https://api.chloemedranophotography.com/wp-json/wp/v2/media?search=couples')
         const petPictures = await response.json()
         console.log(petPictures)
         const container = document.querySelector('#pets')
@@ -73,6 +73,6 @@ const displayPortraitPhoto = async () => {
 
 
 }
-export { displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto }
+export { displayCouplePhoto, displayMaternityPhoto, displayPortraitPhoto }
 
 

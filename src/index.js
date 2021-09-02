@@ -1,5 +1,5 @@
 import $ from "jquery";
-import {displayPetPhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
+import {displayCouplePhoto, displayMaternityPhoto, displayPortraitPhoto} from './portfolio'
 import Glide, { Autoplay } from "@glidejs/glide"
 
 
@@ -20,7 +20,7 @@ dropdownBtn.addEventListener('click', () => {
     submenu.classList.toggle('dropdown')
 })
 
-displayPetPhoto()
+displayCouplePhoto()
 displayMaternityPhoto()
 displayPortraitPhoto()
 
