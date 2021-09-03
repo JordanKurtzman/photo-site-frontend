@@ -68,7 +68,7 @@
                 text-transform: uppercase;
             }
             a:hover{
-                color: $color-light-grey;
+                color: $color-bright;
             }
 
         }
@@ -84,28 +84,27 @@
         }
         &--item{
             display: block;
-            background-color: $color-medium-grey;
+            background-color: $color-grey-pink;
             &:hover{
-                background-color: $color-light-pink;
+                background-color: $color-black;
             }
             
         }
         a:link, a:visited, a:active{
-            color: $color-black;
             text-decoration: none;
             padding: .5rem 2.5rem;
             text-transform: uppercase;
-            color: $color-light-pink;
+            color: $color-black;
         }
         a:hover{
-            color: $color-medium-grey;
+            color: $color-white;
         }
         @media(max-width: 768px){
             width: 100%;
             &--item{
                 display: block;
-                background: $color-medium-grey;
-                color: $color-light-pink;
+                background: $color-grey-pink;
+                color: $color-black;
             }
         }
     }

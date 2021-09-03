@@ -86,7 +86,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   color: #fafafa;
-  background-color: #9fa5d6;
+  background-color: #90a6f5;
   text-decoration: none;
   padding: 2rem;
   border-radius: 5px;
@@ -133,7 +133,7 @@ body {
   border: none;
   text-transform: uppercase;
   font-weight: 400;
-  background-color: #8c9fff;
+  background-color: #90a6f5;
   color: #fafafa;
   width: 30%;
   border-radius: 5px;
@@ -201,7 +201,7 @@ body {
 }
 
 .nav {
-  background-color: #9fa5d6;
+  background-color: #e8e8e8;
   height: 4.5rem;
   font-size: 2.7rem;
   display: -webkit-box;
@@ -282,7 +282,7 @@ body {
   }
   .nav__menu.active li {
     display: block;
-    background-color: #9fa5d6;
+    background-color: #e8e8e8;
   }
   .nav__menu.active a {
     display: block;
@@ -307,7 +307,7 @@ body {
 }
 
 .nav__menu--item a:hover {
-  color: #dbdbdb;
+  color: #90a6f5;
 }
 
 .nav__submenu {
@@ -324,23 +324,22 @@ body {
 
 .nav__submenu--item {
   display: block;
-  background-color: #b5b5b5;
+  background-color: #e8e8e8;
 }
 
 .nav__submenu--item:hover {
-  background-color: #dee2ff;
+  background-color: #262626;
 }
 
 .nav__submenu a:link, .nav__submenu a:visited, .nav__submenu a:active {
-  color: #262626;
   text-decoration: none;
   padding: .5rem 2.5rem;
   text-transform: uppercase;
-  color: #dee2ff;
+  color: #262626;
 }
 
 .nav__submenu a:hover {
-  color: #b5b5b5;
+  color: #fafafa;
 }
 
 @media (max-width: 768px) {
@@ -349,8 +348,8 @@ body {
   }
   .nav__submenu--item {
     display: block;
-    background: #b5b5b5;
-    color: #dee2ff;
+    background: #e8e8e8;
+    color: #262626;
   }
 }
 
@@ -719,9 +718,6 @@ body {
     position: relative;
     z-index: 999;
   }
-  .portfolio__piece--image:hover {
-    border: solid #dee2ff 5px;
-  }
 }
 
 .frontpage__heading {
@@ -734,7 +730,7 @@ body {
 }
 
 .footer {
-  background-color: #9fa5d6;
+  background-color: #e8e8e8;
   height: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,7 +765,7 @@ body {
 }
 
 .footer ul a:link, .footer ul a:visited, .footer ul a:hover, .footer ul a:active {
-  color: #fafafa;
+  color: #262626;
 }
 
 .footer__link--icons {
@@ -778,7 +774,7 @@ body {
 }
 
 .footer__link--p {
-  color: #fafafa;
+  color: #262626;
   font-size: 2rem;
   padding: 1.5rem;
   text-transform: uppercase;

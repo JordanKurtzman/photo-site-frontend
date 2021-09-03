@@ -20,7 +20,7 @@
         align-items: center;
         margin-bottom: 0;
         a:link, a:visited, a:hover, a:active{
-            color: $color-white;
+            color: $color-black;
         }
     }
     &__link--icons{
@@ -28,7 +28,7 @@
         padding: 1.5rem;
     }
     &__link--p{
-        color: $color-white;
+        color: $color-black;
         font-size: 2rem;
         padding: 1.5rem;
         text-transform: uppercase;
