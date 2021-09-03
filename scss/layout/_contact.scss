@@ -57,7 +57,7 @@
 }
 
 #contact-wrapper {
-    background-image: linear-gradient(to right bottom, rgba($color-light-grey, .6), rgba($color-medium-grey, .6)), url('/dist/images/slideshow/Mainpage_3.jpg');
+    background-image: url('/dist/images/slideshow/Mainpage_3.jpg');
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -72,3 +72,5 @@ input[type="date"]:focus:before,
 input[type="date"]:valid:before{
     content: '';
 }
+
+// linear-gradient(to right bottom, rgba($color-light-grey, .6), rgba($color-medium-grey, .6)),
