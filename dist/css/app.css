@@ -865,8 +865,8 @@ body {
 }
 
 #contact-wrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(232, 232, 232, 0.3)), to(rgba(181, 181, 181, 0.3))), url("/images/slideshow/Mainpage_3.jpg");
-  background-image: linear-gradient(rgba(232, 232, 232, 0.3), rgba(181, 181, 181, 0.3)), url("/images/slideshow/Mainpage_3.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(232, 232, 232, 0.3)), to(rgba(181, 181, 181, 0.1))), url("/images/slideshow/Mainpage_3.jpg");
+  background-image: linear-gradient(rgba(232, 232, 232, 0.3), rgba(181, 181, 181, 0.1)), url("/images/slideshow/Mainpage_3.jpg");
   background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;
