@@ -23,7 +23,7 @@ dropdownBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
     if (tablet.matches) {
-        mainMenu.classList.remove('dropdown')
+        submenu.classList.remove('dropdown')
     }
 })
 
