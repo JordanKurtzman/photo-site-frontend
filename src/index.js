@@ -10,6 +10,7 @@ const dropdownBtn = document.querySelector('#dropdownbtn')
 const submenu = document.querySelector('#submenu')
 const formElem = document.getElementById('formElem')
 const datePicker = document.getElementById('preferred-date')
+const tablet = window.matchMedia('(min-width: 768px)')
 
 
 toggleNav.addEventListener('click', () => {
@@ -18,6 +19,12 @@ toggleNav.addEventListener('click', () => {
 
 dropdownBtn.addEventListener('click', () => {
     submenu.classList.toggle('dropdown')
+})
+
+window.addEventListener('resize', () => {
+    if (tablet.matches) {
+        mainMenu.classList.remove('dropdown')
+    }
 })
 
 displayCouplePhoto()
