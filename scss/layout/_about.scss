@@ -16,6 +16,7 @@ position: relative;
     margin-bottom: 5rem;
     display: flex;
     justify-content: flex-end;
+    align-self: center;
     @include respond(tab-port){
         position: relative;
         display: flex;
@@ -30,6 +31,7 @@ position: relative;
             max-width:70%;
             height: auto;
             padding: 5rem;
+            align-self: center;
         }
         
     }
